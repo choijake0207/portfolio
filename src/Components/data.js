@@ -2,6 +2,16 @@ import EchoDemo from "../Assets/EchoDemo.png"
 import HabitDemo from "../Assets/HabitPic.png"
 import Lift4DummiesDemo from "../Assets/Lift4Dummies.png"
 import TaskerDemo from "../Assets/TaskerPic.png"
+import ReactLogo from "../Assets/React-Logos.svg"
+import ExpressLogo from "../Assets/Express-Logos.webp"
+import CSSLogo from "../Assets/CSS-Logo.svg"
+import GitLogo from "../Assets/Git-Logo.png"
+import HTMLLogo from "../Assets/HTML-Logo.png"
+import JavaScriptLogo from "../Assets/JavaScript-Logo.png"
+import MySQLLogo from "../Assets/mysql-logo.svg"
+import NodeLogo from "../Assets/NODE-LOGOS.png"
+import SequelizeLogo from "../Assets/Sequelize-Logo.svg"
+import React from "react"
 
 export const projects = [
     {
@@ -49,26 +59,34 @@ export const projects = [
 export const skills = [
     {
         name: "React.js",
+        imageURL: ReactLogo
     },
     {
-        name: "Express.js"
+        name: "Express.js",
+        imageURL: ExpressLogo
     },
     {
-        name: "Node.js"
+        name: "Node.js",
+        imageURL: NodeLogo
     },
     {
-        name: "MySQL"
+        name: "MySQL",
+        imageURL: MySQLLogo
     },
     {   
-        name: "Sequelize"
+        name: "Sequelize",
+        imageURL: SequelizeLogo
     },
     {
-        name: "Git"
+        name: "Git",
+        imageURL: GitLogo
     },
     {
-        name: "JavaScript"
+        name: "JavaScript",
+        imageURL: JavaScriptLogo
     },
     {
-        name: "CSS"
+        name: "CSS",
+        imageURL: CSSLogo
     }
 ]
