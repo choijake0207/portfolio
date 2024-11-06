@@ -1,0 +1,34 @@
+export const projects = [
+    {
+        id: 0,
+        projectName: "Echo (v 1.0)",
+        skills: [
+            "React.js", "Express.js", "Node.js", "Rest APIs", "JWT", "MySQL"
+        ],
+        description: "A full-stack social media application built similarly to the style of Twitter. Users are able to post content as well as liking, commenting, and saving other's posts."
+    },
+    {
+        id: 1,
+        projectName: "Habit.io",
+        skills: [
+            "React.js", "Express.js", "Node.js", "Rest APIs", "MySQL"
+        ],
+        description: "A full-stack habit management platform allowing users to create, pause, and reset habits and duration-based goals. Users are also able to view all data including number of resets, number of completed goals, and more."
+    },
+    {
+        id: 2,
+        projectName: "Tasker",
+        skills: [
+            "React.js, @dnd-kit"
+        ],
+        description: "A client-side personal KanBan board allowing users to create boards, customize columns, and drag-drop items."
+
+    },
+    {
+        id: 3,
+        projectName: "Lift 4 Dummies",
+        skills: ["Vanilla JS"],
+        description: "A client-side project designed to allow users to learn about fitness techniques in an interactive method through the use of clickable SVGs."
+    }
+   
+]
