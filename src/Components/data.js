@@ -1,7 +1,7 @@
 import EchoDemo from "../Assets/EchoDemo.png"
-import HabitDemo from "../Assets/HabitPic.png"
-import Lift4DummiesDemo from "../Assets/Lift4Dummies.png"
-import TaskerDemo from "../Assets/TaskerPic.png"
+import HabitDemo from "../Assets/HabitDemo.png"
+import Lift4DummiesDemo from "../Assets/LiftDemo.png"
+import TaskerDemo from "../Assets/TaskerDemo.png"
 import ReactLogo from "../Assets/React-Logos.svg"
 import ExpressLogo from "../Assets/Express-Logos.webp"
 import CSSLogo from "../Assets/CSS-Logo.svg"
@@ -89,4 +89,16 @@ export const skills = [
         name: "CSS",
         imageURL: CSSLogo
     }
+]
+
+export const textVersions = [
+    {
+        id: "short",
+        text: "Hi, I'm Jake, a front end engineer passionate about blending creativity and logic to bring ideas to life. Originally a business administration major, I found my true calling in front-end development through self-study in college"
+    },
+    {
+        id: "long",
+        text: "Hi, I'm Jake, a front-end engineer who's deeply passionate about creating dynamic and visually engaging web experiences. My journey began in college, where I was majoring in business administration but felt drawn to the creative and logical challenges of front-end development. I'm fascinated by front-end development because it combines creativity with logic, allowing me to bring innovative ideas into reality. I'm continually motivated to expand my skills and create user-focused, engaging web applications that make a difference."
+    },
+ 
 ]
