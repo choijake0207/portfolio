@@ -1,0 +1,137 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(17,17,17);
+  font-family: "Satoshi Variable";
+}
+a {
+  text-decoration: none;
+}
+.portfolio {
+  position: relative;
+  background: linear-gradient(to bottom, rgb(19, 21, 28) , black);
+  color: white;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 1.25em;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: rgb(17, 17, 17);
+  color: white;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.324);
+  z-index: 1;
+}
+
+#github-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  color: rgb(81, 63, 217)
+}
+#github-link:hover {
+  filter: drop-shadow(1px 1px 5px rgba(169, 161, 224, 0.4))
+}
+.nav-toggle {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle:hover svg{
+  filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.5))
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  background: rgb(17, 17, 17);
+  z-index: 0;
+  transform: translateX(100%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  transition: .4s ease-in-out;
+  height: 100vh;
+  padding-top: 125px;
+  gap: 20px;
+}
+.side-nav.visible{
+  transform: translateX(0%);
+  display: flex;
+}
+.nav-links, .social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1.15em;
+  font-weight: 500;
+  padding: 20px;
+}
+.social-links {
+  border-top: 1px solid white;
+}
+
+
+
+
+.section {
+  height: 100vh;
+}
+
+
+/* About */
+.about-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  border: 2px solid blue;
+}
+.image-wrap {
+  border: 1px solid red;
+}
+.self-image {
+  max-height: 300px;
+  filter: drop-shadow(2px 2px 20px rgb(147, 137, 226, .5))
+}
+.about-content {
+  max-width: 30vw;
+}
+
+/* Project Gallery */
+.project {
+  display: flex;
+}
+.demo-wrapper {
+  background: rgb(101,192,238);
+}
+.demo-pic {
+  width: 500px;
+}
+/* Skills */
+.skill-logo {
+  max-width: 80px;
+}
+
+
+
+
+/* animations */
+@keyframes toggleNav {
+  0% {
+    transform: translateX(100%)
+  }
+  100% {
+    tansform: translateX(0%)
+  }
+}
