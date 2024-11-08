@@ -1,4 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -7,6 +10,9 @@ body {
 }
 a {
   text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
 }
 .portfolio {
   position: relative;
@@ -23,7 +29,7 @@ a {
   position: sticky;
   top: 0;
   left: 0;
-  background: rgb(17, 17, 17);
+  background: rgba(17, 17, 17, 0.99);
   color: white;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.324);
   z-index: 1;
@@ -35,19 +41,22 @@ a {
   gap: 5px;
   font-weight: 500;
   cursor: pointer;
-  color: rgb(81, 63, 217)
+  color: rgb(81, 63, 217);
+  transition: .2s ease 
 }
 #github-link:hover {
-  filter: drop-shadow(1px 1px 5px rgba(169, 161, 224, 0.4))
+  color: rgb(67, 42, 255);
+  scale: 1.05
 }
 .nav-toggle {
   background: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   border: none;
   cursor: pointer;
 }
-.nav-toggle:hover svg{
-  filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.5))
+.nav-toggle:hover svg {
+  transition: .2s ease;
+  color: white;
 }
 
 .side-nav {
@@ -59,11 +68,10 @@ a {
   position: fixed;
   top: 0;
   right: 0;
-  width: 200px;
   transition: .4s ease-in-out;
   height: 100vh;
-  padding-top: 125px;
-  gap: 20px;
+  width: 200px;
+  padding-top: 100px;
 }
 .side-nav.visible{
   transform: translateX(0%);
@@ -72,51 +80,159 @@ a {
 .nav-links, .social-links {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  font-size: 1.15em;
+  gap: 25px;
+  font-size: 1.1em;
   font-weight: 500;
-  padding: 20px;
+  padding: 25px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.nav-links a:hover, .social-links a:hover {
+  color: white;
+  cursor: pointer;
+  transition: .1s;
 }
 .social-links {
-  border-top: 1px solid white;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-
-
-
-
 .section {
-  height: 100vh;
+  min-height: 100vh;
+  border: 1px solid white;
+}
+.section-heading {
+  font-family: "nunito";
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0px;
+  border: 1px solid red;
 }
 
 
 /* About */
 .about-wrap {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
-  margin-top: 50px;
-  border: 2px solid blue;
-}
-.image-wrap {
-  border: 1px solid red;
+  padding-top: 75px;
+ 
 }
 .self-image {
-  max-height: 300px;
-  filter: drop-shadow(2px 2px 20px rgb(147, 137, 226, .5))
+  margin-top: 50px;
+  max-height: 350px;
+  filter: drop-shadow(2px 2px 20px rgb(147, 137, 226, .5));
+  transition: .2s ease;
+}
+.self-image:hover {
+  filter: drop-shadow(2px 2px 40px rgb(147,137,226,.5));
 }
 .about-content {
   max-width: 30vw;
 }
+.intro {
+  font-weight: bolder;
+  font-family: "nunito";
+  font-size: 4vw;
+  margin:0;
+  margin-bottom: 15px;
+
+}
+.text-option-button {
+  display: flex;
+  gap: 10px;
+}
+.text-option-button button {
+  font-size: 1em;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: none;
+  color: rgb(81, 63, 217);
+  border-radius: 5px;
+  border: 2px solid rgb(81,63,217);
+  transition: .2s;
+}
+.text-option-button .active {
+  background: rgb(81,63,217);
+  color: white;
+}
+.about-text {
+  font-size: 1.5em;
+}
+.about-text.long {
+  font-size: 1.25em;
+}
+
 
 /* Project Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 550px 550px;
+  gap: 50px;
+  justify-content: center;
+  padding: 50px;
+}
 .project {
   display: flex;
+  flex-direction: column;
+}
+.project-info {
+
 }
 .demo-wrapper {
-  background: rgb(101,192,238);
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: rgb(81, 63, 217);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  z-index: 0;
 }
+.learn-button {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+}
+.demo-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  z-index: 1;
+  transition: .1s;
+}
+.demo-wrapper:hover::before {
+  background: rgba(0, 0, 0, .6);
+}
+.learn-button {
+  z-index: 2;
+}
+.demo-wrapper:hover .learn-button {
+  visibility: visible;
+  background: none;
+  border-radius: 2.5px;
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  top: 40%;
+  z-index: 5;
+  font-family: "nunito";
+  font-size: 1.25em;
+}
+
 .demo-pic {
-  width: 500px;
+  width: 425px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+  transition: .3s
+}
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 /* Skills */
 .skill-logo {
