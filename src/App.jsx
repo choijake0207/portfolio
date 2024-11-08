@@ -4,7 +4,7 @@ import Gallery from './Components/Gallery'
 import AboutMe from './Components/AboutMe'
 import Contact from './Components/Contact'
 import Skills from './Components/Skills'
-import {GithubLogo, List} from "phosphor-react"
+import {GithubLogo, List, Hand} from "phosphor-react"
 
 export default function App() {
   const [sideNavView, setSideNavView] = useState(false)
@@ -28,20 +28,21 @@ export default function App() {
 
       <nav className={`side-nav ${sideNavView ? "visible" : ""}`}>
         <div className="nav-links">
-          <a>About Me</a>
-          <a>Skills</a>
-          <a>Projects</a>
-          <a>Contact</a>
+          <a href="#About">About</a>
+          <a href="#Skills">Skills</a>
+          <a href="#Gallery">Projects</a>
+          <a href="#Contact">Contact</a>
         </div>
         <div className="social-links">
-          <a>Download Resume</a>
+          <a>My Resume</a>
         </div>
       </nav>
 
 
       <AboutMe/>
-      <Skills/>
       <Gallery/>
+      <Skills/>
+ 
       <Contact/>
     </div>
   )
