@@ -8,7 +8,6 @@ body {
   background: rgb(17,17,17);
   font-family: "Satoshi Variable";
   overflow-y: scroll;
-
 }
 
 a {
@@ -18,22 +17,25 @@ button:hover {
   cursor: pointer;
 }
 .portfolio {
-  background: linear-gradient(to bottom, rgb(19, 21, 28) , black);
+  background: linear-gradient(to bottom, rgb(28, 32, 43) , rgb(21, 21, 23));
   color: white;
 }
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
   font-size: 1.25em;
-  position: sticky;
+  position: fixed;
+  max-width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   top: 0;
   left: 0;
-  background: rgba(17, 17, 17, 0.99);
+  background: linear-gradient(to top, rgba(28, 28, 29, .85), rgb(28,28,29));
   color: white;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
 
@@ -43,12 +45,13 @@ button:hover {
   gap: 5px;
   font-weight: 500;
   cursor: pointer;
-  color: rgb(81, 63, 217);
-  transition: .2s ease 
+  color: rgba(255, 255, 255, 0.5);
+  transition: .2s ease;
+  font-size: .9em;
 }
 #github-link:hover {
-  color: rgb(67, 42, 255);
-  scale: 1.05
+  color: white;
+ 
 }
 .nav-toggle {
   background: none;
@@ -70,11 +73,18 @@ button:hover {
   position: fixed;
   top: 0;
   right: 0;
-  transition: .4s ease-in-out;
+  transition: .2s ease-in-out;
   height: 100vh;
   width: 200px;
   padding-top: 100px;
-  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.side-nav a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: .1s
+}
+.side-nav a:hover {
+  color: white;
 }
 .side-nav.visible{
   transform: translateX(0%);
@@ -98,9 +108,7 @@ button:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 .section {
-  min-height: 80vh;
-  padding-top: 100px;
-
+  padding-top: 125px;
 }
 .section-heading {
   font-family: "nunito";
@@ -108,20 +116,24 @@ button:hover {
   text-align: center;
   margin: 0px;
 }
-
+#About {
+  height: 80vh;
+}
+#Contact {
+  height: 80vh;
+}
 
 /* About */
 .about-wrap {
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
-  padding-top: 50px;
- 
+  justify-content: space-evenly; 
 }
 .self-image {
   max-height: 350px;
   filter:contrast(120%);
   transition: .2s ease;
+  margin-top: 50px;
 }
 .self-image:hover {
   filter: drop-shadow(2px 2px 40px rgb(67, 42, 255, .4));
@@ -280,9 +292,7 @@ button:hover {
 }
 
 /* Skills */
-#Skills {
-  padding-top: 100px;
-}
+
 .skill {
   display: flex;
   flex-direction: column;
@@ -292,8 +302,8 @@ button:hover {
 .skill-logo {
   width: 100px;
   height: 100px;
-  color: white;
   transition: .2s;
+  color: white;
 }
 .skill-logo:hover {
   scale: 1.1;
@@ -311,16 +321,24 @@ button:hover {
 .skill-sign {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  width: 95%;
   font-family: "Satoshi Variable";
-  font-size: 1.25em;
-  color: rgb(81,63,217);
+  font-size: .9em;
+  gap: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.skill-sign svg {
+  font-size: 2em;
 }
 .skill-list {
   display: flex;
   gap: 50px;
   padding: 25px;
   justify-content: center;
+}
+[id="Express.js"] {
+  filter: invert(1);
 }
 /* Contact */
 
@@ -346,4 +364,18 @@ button:hover {
   100% {
     transform: translateY(0%);
   }
+}
+.pop-up {
+  animation: modalSlide .4s ease forwards
+}
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translateX(-100%)
+}
+.show {
+  opacity: 1;
+  transform: translateX(0%);
+  filter: blur(0);
 }
