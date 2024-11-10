@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./App.css"
 import Gallery from './Components/Gallery'
 import AboutMe from './Components/AboutMe'
@@ -8,12 +8,26 @@ import {GithubLogo, List, Hand} from "phosphor-react"
 
 export default function App() {
   const [sideNavView, setSideNavView] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
     <div className="portfolio">
 
 
       <header className="header">
-        <a id="github-link" href="https://github.com/choijake0207">
+        <a id="github-link" href="https://github.com/choijake0207" target="_blank">
           <GithubLogo size="1.5em"/>
           choijake0207
         </a>
